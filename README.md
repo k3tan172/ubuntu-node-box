@@ -14,7 +14,6 @@ The aim of this instructional tutorial is to set up, run and maintain a full bit
 -	electrum-personal-server
 -	c-lightning
 -	spark-wallet
--	btcpayserver
 
 Each software will include the following instructions:
 -	How to [install] the software
