@@ -977,7 +977,7 @@ You can now use spark-wallet to command your lightning node. Here are a couple o
 
 3. Pay someone
 
-    Feel free to test with me by donating a few cents through visiting http://reckless.money. You can ask a friend to send you an invoice to pay. You can pay for some articles that interest you on http://www.yalls.org. You can try your luck at http://www.lightning-roulette.com. There's a website dedicated to lightning network spending at https://lightningnetworkstores.com. Go nuts.
+    Feel free to test with me by donating a few cents through visiting http://reckless.money. You can ask a friend to send you an invoice to pay. You can go to the blockstream store https://store.blockstream.com/ and buy some stickers. You can pay for some articles that interest you on http://www.yalls.org. You can try your luck at http://www.lightning-roulette.com. There's a website dedicated to lightning network spending at https://lightningnetworkstores.com. Go nuts.
 
 4. Find incoming channel partners
 
