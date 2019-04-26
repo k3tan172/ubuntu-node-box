@@ -22,4 +22,4 @@ Feel free to open up a lightning network channel with me here:
 
 ## Contact
 
-You can reach me on Twitter @k3tan88
+You can reach me on Twitter @k3tan172
