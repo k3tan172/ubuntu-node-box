@@ -971,13 +971,13 @@ You can now use spark-wallet to command your lightning node. Here are a couple o
    
 2. Set up a channel
 
-    Click on 'node:' again and then 'Channels'. Click on 'Open channel'. If you'd like to open up a channel with me, my Node URI is 028eef316e8a46699f775e0739cb34de8a15eb48e5276fcfabcc861261c226d35c@ln.reckless.money:9735. Enter an amount (I generally work in sats), so say 200,000 sats, and click 'Open Channel'. This essentially locks in an on-chain transaction with my node. Wait until it shows 'active' in your channels listing.
+    Click on 'node:' again and then 'Channels'. Click on 'Open channel'. If you'd like to open up a channel with any of the nodes on 1ml.com. Enter an amount (I generally work in sats), so say 200,000 sats, and click 'Open Channel'. This essentially locks in an on-chain transaction with the node. Wait until it shows 'active' in your channels listing.
     
-    I would also encourage you to set up channels with others, look around on 1ML.com for channel partners. If you want your node to appear on 1ML.com, open up a channel with them.
+If you want your node to appear on 1ML.com, open up a channel with them.
 
 3. Pay someone
 
-    Feel free to test with me by donating a few cents through visiting http://reckless.money. You can ask a friend to send you an invoice to pay. You can go to the blockstream store https://store.blockstream.com/ and buy some stickers. You can pay for some articles that interest you on http://www.yalls.org. You can try your luck at http://www.lightning-roulette.com. There's a website dedicated to lightning network spending at https://lightningnetworkstores.com. Go nuts.
+    You can ask a friend to send you an invoice to pay. You can go to the blockstream store https://store.blockstream.com/ and buy some stickers. There are more stickers at bitcoinstickerpack.com. You can pay for some articles that interest you on http://www.yalls.org. You can try your luck at http://www.lightning-roulette.com. There's a website dedicated to lightning network spending at https://lightningnetworkstores.com. Go nuts.
 
 4. Find incoming channel partners
 
