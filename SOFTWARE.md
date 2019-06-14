@@ -17,8 +17,8 @@
 2.	Click on the Linux (tgz) 64 bit link. It will automatically be downloaded to ```/home/ketan/Downloads``` [Note that ketan would be your username]
 3.	Open up Terminal and navigate to your Downloads directory. To do this, open terminal and type ```cd Downloads```
 4.	Type ```ls``` and you should see the file that you just downloaded.
-5.	Type ```sudo tar xzf bitcoin-0.17.1-x86_64-linux-gnu.tar.gz``` Type your password in. This will create a directory called ```bitcoin-0.17.1```. Type ```ls``` to confirm you can see the new directory.
-6.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.17.1/bin/*```
+5.	Type ```sudo tar xzf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz``` Type your password in. This will create a directory called ```bitcoin-0.18.0```. Type ```ls``` to confirm you can see the new directory.
+6.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*```
 
 This successfully completes the installation of bitcoin core on to your machine. Congratulations, but we’re not done yet. We need to configure and run it.
 
@@ -250,8 +250,8 @@ To update bitcoin core to the next available version, it is very similar to the 
 3.	Click on the Linux (tgz) 64 bit link. It will automatically be saved in ```/home/ketan/Downloads```
 4.	Navigate to your Downloads directory. Type: ```cd /home/ketan/Downloads```
 5.	Type ```ls``` and you should see the file that you just downloaded.
-6.	Type ```sudo tar xzf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz```. Type your password in. This will create a directory called ```bitcoin-0.18.0```. Type ```ls``` to confirm the new directory.
-7.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*```
+6.	Type ```sudo tar xzf bitcoin-0.18.1-x86_64-linux-gnu.tar.gz```. Type your password in. This will create a directory called ```bitcoin-0.18.1```. Type ```ls``` to confirm the new directory.
+7.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.1/bin/*```
 8.	Type ```sudo systemctl restart bitcoind```
 9.  Type ```bitcoin-cli --version```. This should display the version you've updated to.
 
@@ -275,7 +275,6 @@ server=1
 ```
 
 Save and close nano by CTRL+X, Y then [ENTER]
-
 ```sudo systemctl start bitcoind```
 
 Now let’s get into installing some packages
@@ -410,13 +409,19 @@ Starting to get the hang of it? Good.
 
 #### [Update]
 
-Not applicable
+To update btc-rpc-explorer we need to stop the daemon, install again, then start the daemon back up again.
+
+```
+sudo systemctl stop btc-rpc-explorer
+npm install -g btc-rpc-explorer
+sudo systemctl start btc-rpc-explorer
+```
 
 ### Electrum Wallet
 
 The wallet found in the Bitcoin GUI application itself is quite basic. Installing Electrum Bitcoin Wallet gives you access to enhanced features and also allows you to connect your hardware wallet. Later on, we’ll install electrum-personal-server which hooks into your bitcoin node and into your electrum wallet so you can send and receive transactions using your very own node, not the public ones provided by Electrum. But for now, let's just install the wallet.
 
-Important note, whilst Electrum Bitcoin Wallet is safe to use, it is imperative that you download it from the right source. Do not use any source other than the official website: [https://www.electrum.org](https://www.electrum.org). On the front page you will see “Warning: Versions of Electrum older than 3.3.3 are vulnerable to a phishing attack, where malicious servers ask users to download bitcoin-stealing malware. Do not download Electrum upgrades from any another source than electrum.org.” It’s probably wise to adhere to that.
+Important note, whilst Electrum Bitcoin Wallet is safe to use, it is imperative that you download it from the right source. Do not use any source other than the official website: [https://www.electrum.org](https://www.electrum.org).
 
 #### [Installation]
 
@@ -434,9 +439,9 @@ Type Y to confirm the packages to be installed then hit [ENTER]
 
     ```cd /home/ketan/Downloads```
 
-4.	Install the package. Ensure you use the correct filename. Currently it is version 3.3.4.
+4.	Install the package. Ensure you use the correct filename. Currently it is version 3.3.6.
 
-    ```python3 -m pip install --user Electrum-3.3.4.tar.gz[fast]```
+    ```python3 -m pip install --user Electrum-3.3.6.tar.gz[fast]```
 
 #### [Run and configure]
 
@@ -514,7 +519,7 @@ Open up Firefox and download the latest tar.gz file from the downloads page of e
 
 ```cd /home/ketan/Downloads```
 
-``` python3 -m pip install --user Electrum-3.3.5.tar.gz[fast]```
+``` python3 -m pip install --user Electrum-3.3.7.tar.gz[fast]```
 
 Go to your application launcher and launch Electrum. Version should be updated to the latest. You can check through Help >>> About.
 
@@ -550,17 +555,17 @@ Make sure you’re install in the electrum-personal-server folder
 
 Copy the sample configuration file and rename it to the filename EPS will recognise and read
 
-```cp config.cfg_sample config.cfg```
+```cp config.ini_sample config.ini```
 
-Edit the config.cfg file using nano text editor
+Edit the config.ini file using nano text editor
 
-```sudo nano config.cfg```
+```sudo nano config.ini```
 
 We now need to make some edits to the config.cfg file so that it works
 
 Firstly, we need to open up Electrum Bitcoin Wallet and go to Wallet > Information. There we will see the zpub/xpub string of characters. 
 
-Under the ```[master-public-keys]``` section of the config.cfg file, you will already see a ```#any_name_works = xp….``` line.
+Under the ```[master-public-keys]``` section of the config.ini file, you will already see a ```#any_name_works = xp….``` line.
 
 Whenever there is a # infront of a line, it means it’s a comment and is inactive. If you remove the # in the line item, this turns into a line item that is active. So go ahead and remove the # before ```#any_name_works = xpub………..``` line. Also replace the xpub string of characters with your wallet’s string of characters.
 
@@ -572,7 +577,7 @@ Close Electrum Bitcoin Wallet.
 
 We’re done configuring electrum personal server, so let’s run it.
 
-```electrum-personal-server /home/ketan/electrum-personal-server/config.cfg```
+```electrum-personal-server /home/ketan/electrum-personal-server/config.ini```
 
 Now that we’ve got electrum-personal-server running, it would be a good time to configure the Electrum Bitcoin Wallet to only use our bitcoin node exclusively to broadcast transactions.
 
@@ -597,6 +602,8 @@ CTRL+X, then Y and [ENTER] to save and exit.
 Open up Electrum Wallet from the app launcher or favourites sidebar.
 
 In the bottom right of the application there should be a green status circle. Click on it and confirm you’re connected to 1 node and it’s localhost*.
+
+If you run into an issue whereby your balances aren't updating on your Electrum Wallet, the likely issue is that you have not put in the z/xpub of your wallet into your ```config.ini``` file. If you are adding new z/xpubs into your ```config.ini``` be sure to run ```electrum-personal-server --rescan /home/ketan/electrum-personal-server/config.ini``` 
 
 #### [Run at startup]
 
@@ -957,7 +964,11 @@ Use the login username and password you set in the config file to gain access.
 
 We can update spark-wallet by
 
-```npm install -g spark-wallet```
+```
+sudo systemctl stop spark-wallet
+npm install -g spark-wallet
+sudo systemctl start spark-wallet
+```
 
 #### [Usage of Spark]
 
