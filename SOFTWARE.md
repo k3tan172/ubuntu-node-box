@@ -439,9 +439,9 @@ Type Y to confirm the packages to be installed then hit [ENTER]
 
     ```cd /home/ketan/Downloads```
 
-4.	Install the package. Ensure you use the correct filename. Currently it is version 3.3.6.
+4.	Install the package. Ensure you use the correct filename. Currently it is version 3.3.8.
 
-    ```python3 -m pip install --user Electrum-3.3.6.tar.gz[fast]```
+    ```python3 -m pip install --user Electrum-3.3.8.tar.gz[fast]```
 
 #### [Run and configure]
 
@@ -519,7 +519,7 @@ Open up Firefox and download the latest tar.gz file from the downloads page of e
 
 ```cd /home/ketan/Downloads```
 
-``` python3 -m pip install --user Electrum-3.3.7.tar.gz[fast]```
+``` python3 -m pip install --user Electrum-3.3.9.tar.gz[fast]```
 
 Go to your application launcher and launch Electrum. Version should be updated to the latest. You can check through Help >>> About.
 
