@@ -14,4 +14,4 @@ Thank you to the many contributors who continue to develop the software found in
 
 ## Contact
 
-You can reach me on Twitter @_k3tan(http://www.twitter.com/_k3tan)
+You can reach me on Twitter [@_k3tan](http://www.twitter.com/_k3tan)
