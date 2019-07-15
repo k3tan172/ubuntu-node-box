@@ -100,7 +100,7 @@ Now we just wait until the blockchain syncs in the GUI. Once it does
 
 13. Confirm your node is accepting incoming connections by typing your IP address into [bitnodes.earn.com](http://bitnodes.earn.com) and it showing your bitcoin version. However, if you can't seem to get that to work, don't get too hung up on it. The goal is to get more than 8 connections when you type ```bitcoin-cli getconnectioncount``` into the terminal. Don't spent too much time on it. If you can get it, great. If you can't, try again later. Move on.
 
-14. (Optional) You can also set up your node to run on TOR for an added level of privacy. Whilst outside the scope of this tutorial, Jameson Lopp has written up a guide which you can read [here](https://medium.com/@lopp/how-to-run-bitcoin-as-a-tor-hidden-service-on-ubuntu-cff52d543756) if you so wish. 
+14. (Optional) You can also set up your node to run on TOR for an added level of privacy. Whilst outside the scope of this tutorial, Jameson Lopp has written up a guide which you can read [here](https://blog.lopp.net/how-to-run-bitcoin-as-a-tor-hidden-service-on-ubuntu/) if you so wish. 
 
 Congratulations, you’ve now set up, installed and run bitcoin on your computer. This forms the backbone of your personal financial infrastructure.
 
