@@ -346,7 +346,7 @@ That’s where the Ubuntu service manager comes to our rescue, again. Let's get 
 
 As we learnt when we launched bitcoin on startup, we need to create a .service file and edit it to our requirements. Note the edits I have made below. If you don’t know what the ExecStart directory should be, open up another terminal and type ```whereis btc-rpc-explorer```. That will give you the full path. Mine is /home/ketan/.nvm/versions/node/v11.11.0/bin/btc-rpc-explorer. So you’ll see that reflected in my ExecStart in the script below. I’ve also edited the environment file location and the User and Group.
 
-```sudo nano /etc/system/system/btc-rpc-explorer.service```
+```sudo nano /etc/systemd/system/btc-rpc-explorer.service```
 
 Copy and paste this script in and edit to your requirements.
 
