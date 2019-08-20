@@ -744,7 +744,7 @@ We now need to create a configuration file in this folder.
 The text editor will open up. Let’s type a few lines in.
 
 ```
-alias=WHATEVERYOUWANT # This is the public name of your node. Mine is called LIGHTNINGLORD.
+alias=WHATEVERYOUWANT # This is the public name of your node. Mine is called RECKLESSMONEY.
 network=bitcoin  # This puts us on the main net. 
 bind-addr=192.168.1.49:9735 # Put in your internal IP address
 announce-addr=XXX.XXX.XXX.XXX:9735 # Put in your external IP address.
