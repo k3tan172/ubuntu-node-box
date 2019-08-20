@@ -721,9 +721,11 @@ Hit Y then [ENTER] to download these packages and install.
 
 ```cd lightning```
 
-```make```
+```./configure```
 
-```make install```
+```sudo make```
+
+```sudo make install```
 
 #### [Run and configure]
 
