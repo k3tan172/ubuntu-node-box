@@ -53,4 +53,4 @@ It's now worthwhile rebooting your computer to ensure the hard drive is mounted 
 
 ```sudo reboot```
 
-At this point, we’ve prepared our Ubuntu machine to start the installation of our key financial infrastructure software, so let’s start with the backbone – Bitcoin.
+At this point, we’ve prepared our Ubuntu machine to start the installation of our key financial infrastructure software, so let’s start with the backbone – Bitcoin. Next >>> [Software](SOFTWARE.md)
