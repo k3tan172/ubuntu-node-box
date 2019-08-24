@@ -17,8 +17,8 @@
 2.	Click on the Linux (tgz) 64 bit link. It will automatically be downloaded to ```/home/ketan/Downloads``` [Note that ketan would be your username]
 3.	Open up Terminal and navigate to your Downloads directory. To do this, open terminal and type ```cd Downloads```
 4.	Type ```ls``` and you should see the file that you just downloaded.
-5.	Type ```sudo tar xzf bitcoin-0.18.0-x86_64-linux-gnu.tar.gz``` Type your password in. This will create a directory called ```bitcoin-0.18.0```. Type ```ls``` to confirm you can see the new directory.
-6.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.0/bin/*```
+5.	Type ```sudo tar xzf bitcoin-0.18.1-x86_64-linux-gnu.tar.gz``` Type your password in. This will create a directory called ```bitcoin-0.18.1```. Type ```ls``` to confirm you can see the new directory.
+6.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.1/bin/*```
 
 This successfully completes the installation of bitcoin core on to your machine. Congratulations, but we’re not done yet. We need to configure and run it.
 
@@ -250,8 +250,8 @@ To update bitcoin core to the next available version, it is very similar to the 
 3.	Click on the Linux (tgz) 64 bit link. It will automatically be saved in ```/home/ketan/Downloads```
 4.	Navigate to your Downloads directory. Type: ```cd /home/ketan/Downloads```
 5.	Type ```ls``` and you should see the file that you just downloaded.
-6.	Type ```sudo tar xzf bitcoin-0.18.1-x86_64-linux-gnu.tar.gz```. Type your password in. This will create a directory called ```bitcoin-0.18.1```. Type ```ls``` to confirm the new directory.
-7.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.1/bin/*```
+6.	Type ```sudo tar xzf bitcoin-0.18.2-x86_64-linux-gnu.tar.gz```. Type your password in. This will create a directory called ```bitcoin-0.18.1```. Type ```ls``` to confirm the new directory.
+7.	Type ```sudo install -m 0755 -o root -g root -t /usr/local/bin bitcoin-0.18.2/bin/*```
 8.	Type ```sudo systemctl restart bitcoind```
 9.  Type ```bitcoin-cli --version```. This should display the version you've updated to.
 
@@ -259,7 +259,7 @@ You're now able to maintain your bitcoin node and update it when there's a new v
 
 ### btc-rpc-explorer
 
-btc-rpc-explorer is a piece of software that hooks into your Bitcoin node and provides you with information and statistics about your node and the blockchain in a nice web browser interface. The GitHub repository can be found [here](https://github.com/janoside/btc-rpc-explorer) and a demo of what it looks like can be found [here]( https://btc.chaintools.io/)
+btc-rpc-explorer is a piece of software that hooks into your Bitcoin node and provides you with information and statistics about your node and the blockchain in a nice web browser interface. The GitHub repository can be found [here](https://github.com/janoside/btc-rpc-explorer) and a demo of what it looks like can be found [here]( https://btc.chaintools.io/).
 
 Before we get into the installation, we need to prepare our system to ensure we don’t get any issues whilst we install. We need to add some more lines into our bitcoin.conf file and install some packages. So let's get cracking with the .conf file.
 
@@ -285,9 +285,9 @@ Now let’s get into installing some packages
 
 ```sudo apt-get install curl```
 
-We now need to install node.js using what’s known as a ‘node version manager’ or nvm. I used the below command found in the nvm GitHub repository [here](https://github.com/creationix/nvm)
+We now need to install node.js using what’s known as a ‘node version manager’ or nvm. I used the below command found in the nvm GitHub repository [here](https://github.com/nvm-sh/nvm)
 
-```curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash```
+```curl -o- https://github.com/nvm-sh/nvm/blob/master/install.sh | bash```
 
 Close your terminal and reopen it up. To verify it’s been installed, type:
 
@@ -338,9 +338,9 @@ The first line is the link between the bitcoin node and btc-rpc-explorer. It is 
 
 The second line allows you to access http://localhost:3002 through any computer on your network. You can reach it through your internal IP address. My internal IP address is http://192.168.1.49:3002 for example.
 
-Now all you need to do is run ```btc-rpc-explorer``` and you should be good to go. Note that btc-rpc-explorer won’t work unless you have bitcoind running. If you getting it running through the terminal, the problem is that it’ll hog up the terminal which you can’t close without shutting down btc-rpc-explorer.
+Now all you need to do is run ```btc-rpc-explorer``` and you should be good to go. Note that btc-rpc-explorer won’t work unless you have bitcoind running. If you are running this command through the terminal, the problem is that it’ll hog up the terminal which you can’t close without shutting down btc-rpc-explorer.
 
-That’s where the Ubuntu service manager comes to our rescue, again. Let's get into it.
+That’s where the Ubuntu service manager comes to our rescue again to run it on startup. Let's get into it.
 
 #### [Run on startup]
 
@@ -358,7 +358,7 @@ Requires=bitcoind.service
 
 
 [Service]
-EnvironmentFile=/home/ketan/.config/btc-rpc-explorer.conf
+EnvironmentFile=/home/ketan/.config/btc-rpc-explorer.env
 ExecStart=/home/ketan/.nvm/versions/node/v11.11.0/bin/btc-rpc-explorer
 
 RuntimeDirectory=btc-rpc-explorer
@@ -561,7 +561,7 @@ Edit the config.ini file using nano text editor
 
 ```sudo nano config.ini```
 
-We now need to make some edits to the config.cfg file so that it works
+We now need to make some edits to the config.ini file so that it works
 
 Firstly, we need to open up Electrum Bitcoin Wallet and go to Wallet > Information. There we will see the zpub/xpub string of characters. 
 
