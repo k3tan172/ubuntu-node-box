@@ -29,4 +29,4 @@ I have found software developers are not particularly great at writing up detail
 
 One of the great things about learning from a tutorial such as this is that it allows more users to enter the space and report bugs and issues. The more eyes running over software, the better. I have found software developers on GitHub to be incredibly open to feedback when glitches and bugs are found, however small. This review and feedback cycle is how we develop better software and continuously improve. It is my belief that we get it right particularly when developing open source, trustless and permissionless software that will be the backbone of our future global financial system.
 
-And it all starts with you and your node.
+And it all starts with you and your node. Next >>> [Hardware](HARDWARE.md)
