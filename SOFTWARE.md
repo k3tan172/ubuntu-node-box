@@ -135,6 +135,8 @@ I’m going to describe the process for configuring the service manager. Try to 
     
     e) I've changed ```Group=ketan```
     
+    f) I've changed ```ExecStartPre``` line
+    
 ```    
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
@@ -155,6 +157,10 @@ ExecStart=/usr/local/bin/bitcoind -daemon \
                             -pid=/run/bitcoind/bitcoind.pid \
                             -conf=/home/ketan/.bitcoin/bitcoin.conf \
                             -datadir=/mnt/2TBHDD/Bitcoin
+
+# Make sure the config directory is readable by the service user
+PermissionsStartOnly=true
+ExecStartPre=/bin/chgrp ketan /etc/bitcoin
 
 # Process management
 ####################
