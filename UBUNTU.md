@@ -5,6 +5,8 @@
 -----
 # An extensive guide to building your financial sovereignty on Ubuntu 18.04
 
+## An updated YouTube version of this series can be found [here](https://www.youtube.com/channel/UC93aLHD4fxvLPP3KSOV0TIg/playlists)
+
 ## Ubuntu Installation
 
 Once you’ve got your hardware going, it’s time to install Ubuntu on it. There are plenty of tutorials on the internet on how to create a USB boot disk for Ubuntu 18.04LTS and installing it onto your computer. Read the below points as you go through the installation process.
