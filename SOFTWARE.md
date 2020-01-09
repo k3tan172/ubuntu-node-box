@@ -5,6 +5,7 @@
 -----
 # An extensive guide to building your financial sovereignty on Ubuntu 18.04
 
+## An updated YouTube version of this series can be found [here](https://www.youtube.com/channel/UC93aLHD4fxvLPP3KSOV0TIg/playlists)
 
 [ [Bitcoin Core](#bitcoin-core) ] -- [ [btc-rpc-explorer](#btc-rpc-explorer) ] -- [ [Electrum Wallet](#electrum-wallet) ] --  [ [Electrum Personal Server](#electrum-personal-server) ] -- [ [Lightning Network](#lightning-network) ] -- [ [c-lightning](#c-lightning) ] -- [ [Spark Wallet](#spark-wallet) ]
 
