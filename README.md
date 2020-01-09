@@ -5,6 +5,8 @@
 -----
 # An extensive guide to building your financial sovereignty on Ubuntu 18.04
 
+## An updated YouTube version of this series can be found [here](https://www.youtube.com/channel/UC93aLHD4fxvLPP3KSOV0TIg/playlists)
+
 ## Introduction
 
 The aim of this instructional tutorial is to set up, run and maintain a full bitcoin and lightning network node on Ubuntu 18.04 starting from a fresh installation. The following software will be installed:
