@@ -1,0 +1,15 @@
+[Unit]
+Description=Blocksat-API
+Wants=blocksat.service
+After=blocksat.service
+
+[Service]
+ExecStart=/home/bitcoin/Envs/blocksat-api/bin/python3 /home/bitcoin/satellite/api/examples/api_data_reader.py -i lo --plaintext
+User=bitcoin
+Group=bitcoin
+TimeoutSec=120
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
