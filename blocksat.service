@@ -1,0 +1,15 @@
+[Unit]
+Description=Blocksat
+Wants=bitcoind.service
+After=bitcoind.service
+
+[Service]
+ExecStart=/usr/local/bin/blocksat-cli sdr -g 20 --derotate -100 -d
+User=bitcoin
+Group=bitcoin
+TimeoutSec=120
+Restart=always
+RestartSec=60
+
+[Install]
+WantedBy=multi-user.target
